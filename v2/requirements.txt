@@ -1,0 +1,27 @@
+# ── ML / captioning (Linux/GPU machine only) ─────────────────────────────────
+torch>=2.2.0
+torchvision
+transformers>=4.45.0
+accelerate>=0.26.0
+bitsandbytes>=0.43.0        # 4-bit quantisation for Qwen2-VL
+qwen-vl-utils               # Qwen2-VL image processing helper
+sentencepiece
+
+# ── Image handling ────────────────────────────────────────────────────────────
+Pillow>=10.0.0
+pillow-heif>=0.16.0         # HEIC/HEIF support
+                             # Windows: also install libheif DLL — see SETUP.md
+
+# ── Database ──────────────────────────────────────────────────────────────────
+psycopg2-binary>=2.9.0
+
+# ── Embeddings / search UI ────────────────────────────────────────────────────
+sentence-transformers        # BGE-large-en for search (much smaller than full torch stack)
+
+# ── Web UI ────────────────────────────────────────────────────────────────────
+streamlit>=1.32.0
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+tqdm
+numpy
+exifread>=3.0.0              # robust HEIC/JPG EXIF fallback in date extraction
